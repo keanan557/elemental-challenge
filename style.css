@@ -1,0 +1,42 @@
+.container{
+    max-width: 1920px;
+    height: 1666px;
+    border: 2px solid red;
+}
+
+.banner img{
+    max-width: 100%;
+}
+
+.text p{
+    margin-top: 86px;
+    border: 1px solid red;
+    max-width: 880px;
+    margin-bottom: 115px;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    gap:25px;
+    margin-bottom: 47px;
+}
+
+.box{
+    width: 480px;
+    height:200px;
+    background: #061c2c;
+}
+
+.content-bottom{
+    display: flex;
+    justify-content: center;
+    gap:25px;
+   
+}
+
+.box-bottom{
+    width: 232px;
+    height:38px;
+    background: #244ac2;
+}
