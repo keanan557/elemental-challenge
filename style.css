@@ -4,12 +4,6 @@
     font-family: 'Open Sans',sans-serif;
 }
 
-.container{
-    max-width: 1920px;
-    height: 1666px;
-    /* border: 2px solid red; */
-}
-
 /* off-screen menu */
 .off-screen-menu {
     background-color: #061c2c;
@@ -100,26 +94,30 @@ nav img{
 }
 
 .middle{
-    display: grid;
-    border: 1px solid blue;
-    grid-template-columns: repeat(2,1fr);
+    display: flex;
+    /* border: 1px solid blue; */
+    justify-content: center;
     gap: 24px;
-    place-items: center;
 }
 
 .text p{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     font-size: 24px;
     color: #061c2c;
     font-weight: 300;
     line-height: 36px;
+    padding: 24px;
 }
 
 /* animate-logo */
+.animate-logo{
+    padding: 24px;
+}
+
 .animate-logo img{
     width: 300px;
     height: 42px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .content{
@@ -158,14 +156,14 @@ nav img{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap:25px;
-    border: 2px solid pink;
+    /* border: 2px solid pink; */
     place-items: center;
 }
 
 .outer{
     display: flex;
     gap:20px;
-    border: 5px solid red;
+    /* border: 5px solid red; */
     width: 400px;
 }
 
@@ -226,13 +224,14 @@ img.displaySlide{
         justify-content: center;
         gap:25px;
         margin-bottom: 47px;
-        border: 1px solid green;
+        /* border: 1px solid green; */
         flex-direction: column;
+        align-items: center;
     }
 
     .middle{
         display: flex;
-        border: 1px solid green;
+        /* border: 1px solid green; */
         margin: auto;
         justify-content: space-around;
         flex-direction: column;
@@ -242,9 +241,29 @@ img.displaySlide{
         display: grid;
         grid-template-columns: repeat(1,1fr);
         gap:25px;
-        border: 10px solid black;
+        /* border: 10px solid black; */
         place-items: center;
     }
 
-   
+    .outer{
+        display: flex;
+        justify-content: center;
+        gap:20px;
+        /* border: 5px solid green; */
+        width: 400px;
+    }
+
+    .box{
+        width:100%;
+        max-width: 480px;
+        height:200px;
+        background: #061c2c;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 20px;
+        margin: 24px;
+        gap: 24px;
+    }
 }
