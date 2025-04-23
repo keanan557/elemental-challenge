@@ -68,6 +68,12 @@ nav{
     cursor: pointer;
     z-index: 3;
     /* border: 2px solid red; */
+    transition: 0.3s ;
+    
+}
+
+.hamburger-menu:hover{
+    scale:1.2;
 }
 
 .hamburger-menu span{
@@ -83,11 +89,11 @@ nav{
 }
 
 .hamburger-menu span:nth-child(1){
-    top:25%;
+    top:20%;
 }
 
 .hamburger-menu span:nth-child(3){
-    top: 75%;
+    top: 80%;
 }
 
 .hamburger-menu.active span:nth-child(1){
@@ -272,6 +278,14 @@ nav{
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
+  transition: transform 0.2s ease-in-out;
+  
+}
+
+
+
+.next:hover{
+    transform: translateX(10px);
 }
 
 
@@ -287,7 +301,7 @@ nav{
   bottom: 150px;
   width: 50%;
   text-align: center;
-  background-color: #29a4e6;
+  background-color: #244ac2;
   height: 50px;
   display: block;
   text-transform: uppercase;
