@@ -24,6 +24,7 @@
 
 .off-screen-menu a{
     text-decoration: none;
+    color: #244ac2;
 }
 
 .off-screen-menu a:hover{
@@ -44,7 +45,9 @@ nav{
     padding: 24px;
     justify-content: center;
     align-items: center;
-
+    /* border: 1px solid red; */
+    margin-bottom: 50px;
+    /* margin-top: 50px; */
 }
 
 /* logo */
@@ -105,9 +108,12 @@ nav{
 
 .middle{
     display: flex;
-    /* border: 1px solid blue; */
+    /* border: 1px solid red; */
     justify-content: center;
     gap: 24px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    padding: 24px;
 }
 
 .text-par p{
@@ -134,7 +140,10 @@ nav{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap:25px;
-    margin-bottom: 47px;
+    margin-bottom: 50px;
+    /* border: 1px solid red; */
+    padding: 24px;
+    
 }
 
 .box{
@@ -148,6 +157,12 @@ nav{
     padding: 0 20px;
     margin: 24px;
     gap: 24px;
+    cursor: pointer;
+    transition: scale 0.5s;
+}
+
+.box:hover{
+    scale: 1.1;
 }
 
 .box p{
@@ -166,9 +181,10 @@ nav{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap:25px;
-    /* border: 2px solid pink; */
+    /* border: 2px solid red; */
     place-items: center;
-    
+    margin-bottom: 50px;
+    padding: 24px;
 }
 
 .outer{
@@ -180,7 +196,7 @@ nav{
 }
 
 .box-bottom{
-    flex-grow: 1;
+    width: 50%;
     height:60px;
     background: #244ac2;
     color: #fff;
@@ -189,6 +205,11 @@ nav{
     justify-content: center;
     align-items: center;
     text-align: center;
+    cursor: pointer;
+}
+
+.box-bottom:hover{
+    background-color: #061c2c;
 }
 
 .box-bottom p{
@@ -314,6 +335,8 @@ nav{
 }
 
 /* responsive */
+
+/* average screens */
 @media (max-width:768px){
     .content{
         display: flex;
@@ -350,8 +373,8 @@ nav{
     }
 
     .box{
-        width:100%;
-        max-width: 480px;
+        
+        width: 350px;
         height:200px;
         background: #061c2c;
         display: flex;
@@ -362,4 +385,14 @@ nav{
         margin: 24px;
         gap: 24px;
     }
+}
+
+/* larger screens */
+@media (max-width: 992px){
+
+}
+
+/* smaller screens */
+@media (max-width: 576px){
+
 }
