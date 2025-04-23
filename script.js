@@ -11,58 +11,38 @@ hamMenu.addEventListener('click', ()=>{
 
 // image slider
 
-const slides = document.querySelectorAll('.image-slides img')
+let slideIndex = 1;
+showSlides(slideIndex);
 
-let slideIndex = 0
-
-let intervalId = null
-
-// initializeSlider()
-document.addEventListener('DOMContentLoaded',initializeSlider)
-
-
-function initializeSlider(){
-
-    if(slides.length > 0){
-        slides[slideIndex].classList.add('displaySlide')
-        intervalId = setInterval(rightSlide, 5000)
-    }
-
-
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
-function showSlide(index){
-
-
-    if(index >= slides.length){
-        slideIndex = 0
-    }
-
-    else if(index < 0){
-        slideIndex = slides.length - 1
-    }
-
-    slides.forEach(slide => {
-        slide.classList.remove('displaySlide')
-    })
-    slides[slideIndex].classList.add('displaySlide')
-
+function currentSlide(n) {
+  showSlides(slideIndex = n);
 }
 
-function leftSlide(){
-    clearInterval(intervalId)
-    slideIndex--
-    showSlide(slideIndex)
-}
-
-function rightSlide(){
-    slideIndex++
-    showSlide(slideIndex)
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
 }
 
 // references
 // https://youtu.be/749ta0nvj8s?si=vA4pkwph3JbIpqkU
 // https://youtu.be/aNDqzlAKmZc?si=0qOb6X1ahTb2jhPg
+// https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow
+
 
 
 
