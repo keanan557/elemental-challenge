@@ -1,13 +1,31 @@
 // hamburger menu
 
-const hamMenu = document.querySelector('.hamburger-menu')
+const hamMenu = document.querySelector('.hamburger-menu');
+const offScreenMenu = document.querySelector('.off-screen-menu');
+const navElement = document.querySelector('nav');
+const logoElement = document.querySelector('.Logo'); // Assuming your logo has the class "Logo"
 
-const offScreenMenu = document.querySelector('.off-screen-menu')
+hamMenu.addEventListener('click', () => {
+  hamMenu.classList.toggle('active');
+  offScreenMenu.classList.toggle('active');
 
-hamMenu.addEventListener('click', ()=>{
-    hamMenu.classList.toggle('active')
-    offScreenMenu.classList.toggle('active')
-})
+  if (offScreenMenu.classList.contains('active')) {
+    // Menu is open: hide logo and change nav background color
+    if (logoElement) {
+      logoElement.style.opacity = '0';
+      logoElement.style.visibility = 'hidden';
+    }
+    const offScreenBgColor = window.getComputedStyle(offScreenMenu).backgroundColor;
+    navElement.style.backgroundColor = offScreenBgColor;
+  } else {
+    // Menu is closed: show logo and revert nav background color
+    if (logoElement) {
+      logoElement.style.opacity = '1';
+      logoElement.style.visibility = 'visible';
+    }
+    navElement.style.backgroundColor = '#fff'; // Or whatever your default nav background color is
+  }
+});
 
 // image slider
 

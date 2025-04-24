@@ -10,8 +10,8 @@
     /* color: #fff; */
     height: 100vh;
     position: fixed;
-    width: 100%;
-    right: -100%;
+    width: 100vw;
+    right: -100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -64,8 +64,14 @@ nav{
     padding: 60px 60px 0;
     /* border: 1px solid red; */
     margin-bottom: 50px;
-    /* margin-top: 50px; */
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    height: 110px;
+    z-index: 10;
 }
+
+
 
 /* logo */
 .Logo img{
@@ -257,7 +263,7 @@ nav{
     position: relative;
     margin: auto;
     /* Set a responsive height for the container using viewport height (vh) */
-    height: 65vh; 
+    height: 650px; 
     overflow: hidden; 
   }
   
@@ -321,7 +327,7 @@ nav{
     font-size: 22px;
     padding: 8px 12px;
     position: absolute;
-    bottom: 200px;
+    bottom: 300px;
     width: 50%;
     text-align: center;
     background-color: #244ac2;
