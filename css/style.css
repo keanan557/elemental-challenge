@@ -328,27 +328,28 @@ nav{
 
 /* The dots/bullets/indicators */
 .dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+    cursor: pointer;
+    height: 22px;
+    width: 22px;
+    margin: 0 2px;
+    border-radius: 50%;
+    display: inline-block;
+    background-image: radial-gradient(circle, transparent 50%, white 50%, white 70%, transparent 70%);
+    transition: background-color 0.3s ease; /* Smoother transition */
+  }
   
-}
-
+  .dot-active {
+    background-image: radial-gradient(circle, transparent 50%, lightgrey 50%, lightgrey 70%, transparent 70%);
+  }
+  
+  .dot:hover {
+    background-image: radial-gradient(circle, transparent 50%, #eee 50%, #eee 70%, transparent 70%); /* Slightly lighter on hover for feedback */
+  }
 .dot-contain{
     text-align:right;
     position: relative;
     bottom: 50px;
 }
-
- .dot-active, .dot:hover {
-  background-color: #717171;
-}
-
 /* Fading animation */
 .fade {
   animation-name: fade;
