@@ -1,10 +1,11 @@
 // hamburger menu
-
+// variables
 const hamMenu = document.querySelector('.hamburger-menu');
 const offScreenMenu = document.querySelector('.off-screen-menu');
 const navElement = document.querySelector('nav');
-const logoElement = document.querySelector('.Logo img'); // Assuming the image inside .Logo needs to be white
+const logoElement = document.querySelector('.Logo img');
 
+// functions
 hamMenu.addEventListener('click', () => {
   hamMenu.classList.toggle('active');
   offScreenMenu.classList.toggle('active');
@@ -12,16 +13,16 @@ hamMenu.addEventListener('click', () => {
   if (offScreenMenu.classList.contains('active')) {
     // Menu is open: make logo white and change nav background color
     if (logoElement) {
-      logoElement.style.filter = 'brightness(0) invert(1)'; // Make white by inverting brightness
+      logoElement.style.filter = 'brightness(0) invert(1)'; 
     }
     const offScreenBgColor = window.getComputedStyle(offScreenMenu).backgroundColor;
     navElement.style.backgroundColor = offScreenBgColor;
   } else {
     // Menu is closed: revert logo and nav background color
     if (logoElement) {
-      logoElement.style.filter = ''; // Remove the filter to show original color
+      logoElement.style.filter = ''; 
     }
-    navElement.style.backgroundColor = '#fff'; // Or whatever your default nav background color is
+    navElement.style.backgroundColor = '#fff'; 
   }
 });
 
