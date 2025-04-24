@@ -184,12 +184,13 @@ nav{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 0 20px;
+    padding: 96ppx 0 0 32px;
     margin: 24px;
     gap: 24px;
     cursor: pointer;
     transition: scale 0.5s;
     /* border: 1px solid red; */
+    position: relative;
 }
 
 .box:hover{
@@ -198,15 +199,26 @@ nav{
 
 .box p{
     color: #fff;
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 400;
     /* border: 1px solid white; */
+    width: 232px;
+    height: 69px;
+    position: absolute;
+    left:20px;
+    top: 90px;
 }
 
+/* arrow  */
 .box h2{
     color:#29a4e6;
-    font-size: 3rem;
+    font-size: 5rem;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    
 }
+
 
 .content-bottom{
     display: grid;
@@ -239,7 +251,8 @@ nav{
     align-items: center;
     text-align: center;
     cursor: pointer;
-    padding: 5px;
+    padding: 0 17px;
+    width: 400px;
     /* border: 2px solid red; */
 }
 
