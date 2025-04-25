@@ -4,6 +4,23 @@
     font-family: 'Open Sans',sans-serif;
 }
 
+body{
+    display: grid;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* flex-direction: column; */
+    place-items: center;
+    /* border: 2px solid blue; */
+}
+
+.contain {
+    max-width: 1300px;
+    /* border: 2px solid red; */
+    display: grid;
+    position: relative;
+}
+
+
 /* off-screen menu */
 .off-screen-menu {
     background-color: #061c2c;
@@ -19,7 +36,7 @@
     text-align: center;
     font-size: 3rem;
     transition: .3s ease;
-    z-index: 2;
+    z-index: 10;
 } 
 
 .off-screen-menu a{
@@ -81,6 +98,7 @@ nav{
     max-width: 200px;
     cursor: pointer;
     /* border: 1px solid red; */
+    
 }
 
 /* hamburger menu */
@@ -90,7 +108,7 @@ nav{
     margin-left: auto;
     position: relative;
     cursor: pointer;
-    z-index: 3;
+    z-index: 99;
     /* border: 2px solid red; */
     transition: 0.3s ;
     
@@ -110,6 +128,7 @@ nav{
     left: 50%;
     transform: translate(-50%, -50%);
     transition: .3s ease;
+    z-index: 99;
 }
 
 .hamburger-menu span:nth-child(1){
@@ -281,6 +300,7 @@ nav{
     /* Set a responsive height for the container using viewport height (vh) */
     height: 650px; 
     overflow: hidden; 
+    z-index: 5;
   }
   
   /* Individual slides */
@@ -343,11 +363,11 @@ nav{
     font-size: 22px;
     padding: 8px 12px;
     position: absolute;
-    bottom: 300px;
+    bottom: 290px;
     width: 50%;
     text-align: center;
     background-color: #244ac2;
-    height: 50px;
+    height: 90px;
     display: block;
     text-transform: uppercase;
     display: flex;
@@ -403,6 +423,37 @@ nav{
     position: relative;
     bottom: 50px;
   }
+
+  .outside-blue-bar {
+    position: absolute;
+    bottom: 300px;
+    height: 50px;
+    background-color: purple;
+    z-index: 11;
+}
+
+/* Bar before the text */
+.outside-blue-bar.before {
+    position: absolute; /* Make it fixed */
+    top: 470px; /* Stick it to the top of the viewport */
+    left: 0;
+    width: 30%;
+    height: 110px;
+    background: #244ac2;
+    z-index: 3;
+}
+
+.outside-blue-bar.after {
+    position: absolute;
+    top: 470px; /* Adjust vertical position as needed */
+    right: 9%;
+    height: 110px;
+    background: #000;
+    left: 75%; /* Start at the horizontal center of the slider */
+    transform: translateX(0); /* No need for negative translateX here as we want the left edge at 50% */
+    z-index: 4;
+    width: 30%;
+}
 
 
 /* responsive */
@@ -469,6 +520,35 @@ nav{
 
     }
 
+    .contain {
+        max-width: 100%;
+        /* border: 2px solid red; */
+        display: grid;
+        position: relative;
+    }
+
+    .outside-blue-bar.before {
+        position: absolute; /* Make it fixed */
+        top: 470px; /* Stick it to the top of the viewport */
+        left: 0;
+        width: 30%;
+        height: 110px;
+        background: #244ac2;
+        z-index: 3;
+    }
+    
+    .outside-blue-bar.after {
+        position: absolute;
+        top: 470px; /* Adjust vertical position as needed */
+        right: 9%;
+        height: 110px;
+        background: #000;
+        left: 75%; /* Start at the horizontal center of the slider */
+        transform: translateX(0); /* No need for negative translateX here as we want the left edge at 50% */
+        z-index: 4;
+        width: 30%;
+    }
+
     .outer{
         display: grid;
         justify-content: center;
@@ -519,6 +599,13 @@ nav{
         width:250px;
         height: 42px;
         /* border: 1px solid red; */
+    }
+
+    .contain {
+        max-width: 800px;
+        /* border: 2px solid red; */
+        display: grid;
+        position: relative;
     }
 
     .middle{
@@ -798,6 +885,6 @@ nav{
     text-align: center;
     font-size: 3rem;
     transition: .3s ease;
-    z-index: 2;
+    z-index: 10;
 } 
 }
